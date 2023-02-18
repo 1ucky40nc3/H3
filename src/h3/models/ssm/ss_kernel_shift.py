@@ -12,7 +12,7 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from opt_einsum import contract
 
-from src.models.ssm.ssm_utils import OptimModule
+from h3.models.ssm.ssm_utils import OptimModule
 
 
 class SSKernelShift(OptimModule):

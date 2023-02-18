@@ -4,7 +4,7 @@ import torch
 
 from transformers import GPT2Tokenizer
 
-from src.models.ssm_seq import SSMLMHeadModel
+from h3.models.ssm_seq import SSMLMHeadModel
 
 
 parser = argparse.ArgumentParser(description='H3 text generation')

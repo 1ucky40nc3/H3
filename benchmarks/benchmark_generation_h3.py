@@ -9,8 +9,8 @@ from einops import rearrange
 
 from transformers import GPT2Tokenizer, GPT2Config, GPT2LMHeadModel
 
-from src.models.ssm.h3 import H3
-from src.models.ssm_seq import SSMLMHeadModel
+from h3.models.ssm.h3 import H3
+from h3.models.ssm_seq import SSMLMHeadModel
 
 from flash_attn.utils.generation import InferenceParams
 

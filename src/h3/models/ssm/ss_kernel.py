@@ -14,14 +14,14 @@ import torch.nn.functional as F
 from einops import rearrange, repeat
 from opt_einsum import contract
 
-from src.models.ssm.ss_kernel_diag import SSKernelDiag, EMAKernel
-from src.models.ssm.ss_kernel_shift import SSKernelShift
+from h3.models.ssm.ss_kernel_diag import SSKernelDiag, EMAKernel
+from h3.models.ssm.ss_kernel_shift import SSKernelShift
 
-from src.models.ssm import hippo
-from src.models.ssm import dplr
-from src.ops.krylov import power
+from h3.models.ssm import hippo
+from h3.models.ssm import dplr
+from h3.ops.krylov import power
 
-from src.utils.utils import get_logger
+from h3.utils.utils import get_logger
 
 log = get_logger(__name__)
 

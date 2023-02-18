@@ -6,7 +6,7 @@ import pytest
 
 from einops import rearrange
 
-from src.ops.fftconv import fftconv_ref, fftconv_h3_ref, fftconv_func
+from h3.ops.fftconv import fftconv_ref, fftconv_h3_ref, fftconv_func
 
 
 @pytest.mark.parametrize('output_hbl_layout', [False, True])

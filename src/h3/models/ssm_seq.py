@@ -24,7 +24,7 @@ try:
 except ImportError:
     dropout_add_layer_norm = None
 
-from src.models.ssm.h3 import H3
+from h3.models.ssm.h3 import H3
 
 
 def create_mixer_cls(ssm_cls=H3, ssm_cfg=None, attn_layer_idx=None, attn_cfg=None, layer_idx=None):
