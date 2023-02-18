@@ -10,6 +10,20 @@ Paper: https://arxiv.org/abs/2212.14052
 
 ![H3](assets/banner.png)
 
+# Installation
+Install H3 from souce for development with the command:
+```bash
+pip install -e .
+```
+Some of the requirements could be installed via:
+```bash
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+pip install pytorch-lightning
+pip install flash-attn
+pip install pykeops
+pip install einops
+```
+
 # Code & model release
 
 You can find model weights on the Hugging Face Hub here (under "Files and Versions" for each model):
