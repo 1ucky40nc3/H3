@@ -27,6 +27,9 @@ except ImportError:
 from h3.models.ssm.h3 import H3
 
 
+CausalLMOutput = namedtuple('CausalLMOutput', ['logits', 'hidden_states'])
+
+
 def create_mixer_cls(ssm_cls=H3, ssm_cfg=None, attn_layer_idx=None, attn_cfg=None, layer_idx=None):
     if attn_layer_idx is not None and layer_idx in attn_layer_idx:
         causal = True if attn_cfg is None else attn_cfg.pop('causal', True)
@@ -187,8 +190,8 @@ class SSMLMHeadModel(nn.Module, GenerationMixin):
         hidden_states = self.backbone(input_ids, position_ids=position_ids,
                                       inference_params=inference_params)
         lm_logits = self.lm_head(hidden_states)
-        CausalLMOutput = namedtuple('CausalLMOutput', ['logits'])
-        return CausalLMOutput(logits=lm_logits)
+        
+        return CausalLMOutput(logits=lm_logits, hidden_states=hidden_states)
 
     def load_state_dict(self, state_dict, strict=True):
         # Remapping from our checkpoints that used different names
