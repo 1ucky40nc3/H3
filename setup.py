@@ -5,7 +5,7 @@ from setuptools import (
 
 
 setup(
-    name="feed_h3",
+    name="h3",
     version="0.0.1",
     author="Tri Dao*, Daniel Y. Fu*, Khaled K. Saab, Armin W. Thomas, Atri Rudra, Christopher Ré",
     description="Hungry Hungry Hippos (H3)",
